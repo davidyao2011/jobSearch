@@ -1,0 +1,86 @@
+$body-color: #c245f3;
+$default-padding: 2rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    background: #242582;
+    color: $body-color;
+    min-height: 100vh;
+    letter-spacing: 1px;
+}
+
+ul, ol {
+    margin-left: 1rem;
+}
+
+.header {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .title {
+        font-weight: 600;
+        font-size: 3rem;
+        color: #ffffff;
+    }
+}
+
+.search-section {
+    width: 70%;
+    margin: 20px auto;
+
+    input {
+        padding: $default-padding;
+        font-size: 1.5rem;
+    }
+
+    .btn-search {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        width: 13rem;
+        line-height: 1.5;
+        color: #ffffff;
+        border: none;
+    }
+}
+
+.filters {
+    display: flex;
+    width: 70%;
+
+    .filter-btn {
+        margin: 2rem;
+        margin-left: 0;
+        padding: 1rem;
+        display: block;
+        border: 1px solid #888;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    .active {
+        background: #0069d9;
+        color: #fff;
+    }
+    .full-time-checkbox {
+        input {
+            margin-top: 0.5rem;
+        }
+        label {
+            margin-left: 1rem;
+        }
+    }
+}
