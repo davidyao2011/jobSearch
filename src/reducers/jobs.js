@@ -9,4 +9,4 @@ const jobsReducer = (state = [], action) => {
   }
 };
 
-export default jobReducer;
+export default jobsReducer;
