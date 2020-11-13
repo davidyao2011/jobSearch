@@ -23,7 +23,6 @@ export const initiateGetJobs = (data) => {
         (a, b) =>
           moment(new Date(b.created_at)) - moment(new Date(a.created_at))
       );
-
       return dispatch(setJobs(sortedJobs));
     } catch (error) {
       error.response && dispatch(setErrors(error.response.data));

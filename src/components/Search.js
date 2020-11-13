@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 
-export default function Search() {
+export default function Search(props) {
   const [state, setState] = useState({
     description: "",
     location: "",
@@ -20,6 +20,7 @@ export default function Search() {
   const handleSearch = (event) => {
     event.preventDefault();
     console.log(state);
+    props.onSearch(state);
   };
 
   return (
