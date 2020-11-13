@@ -21,15 +21,14 @@ app.get("/jobs", async (req, res) => {
       page = isNaN(page) ? "" : `&page=${page}`;
     }
 
-    const query = `https://job.github.com/positions.json?description=${description}&location=${location}${full_time}${page}`;
-
+    const query = `https://jobs.github.com/positions.json?description=${description}&location=${location}${full_time}${page}`;
     const result = await axios.get(query);
     res.send(result.data);
   } catch (error) {
-    res.status(400).send("ERRORS GETTING JOBS. TRY AGAIN LATER!");
+    res.status(400).send("Error while getting list of jobs.Try again later.");
   }
 });
 
 app.listen(PORT, () => {
-  console.log(` Server is running on ${PORT}`);
+  console.log(`server started on port ${PORT}`);
 });
