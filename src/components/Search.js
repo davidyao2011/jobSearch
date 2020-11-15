@@ -52,9 +52,12 @@ export default function Search() {
             </Form.Group>
           </Col>
           <Col>
-            <Button variant="primary" type="submit" className="btn-search">
+          <Form.Group>
+          <Button variant="info" type="submit" className="btn-search">
               Search Job
             </Button>
+          </Form.Group>
+            
           </Col>
         </Row>
 
