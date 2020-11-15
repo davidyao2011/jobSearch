@@ -1,5 +1,6 @@
-import React, {useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import JobsContext from "../context/jobs";
+import Image from "./Image";
 
 export default function JobDetails() {
   const { details, onResetPage } = useContext(JobsContext);
@@ -16,8 +17,8 @@ export default function JobDetails() {
   } = details;
 
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="job-details">
@@ -41,7 +42,7 @@ export default function JobDetails() {
         <div className="right-section">
           <div className="company-details">
             <h3>About company</h3>
-            <img src={company_logo} alt={company} className="company-logo" />
+            <Image src={company_logo} alt={company} className="company-logo" />
             <div className="company-name">{company}</div>
             <a href={company_url} className="company-url">
               {company_url}
